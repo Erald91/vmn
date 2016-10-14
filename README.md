@@ -1,0 +1,2 @@
+# vmn
+Temporary VMN repository

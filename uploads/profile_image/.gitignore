@@ -1,0 +1,5 @@
+# Remove from pushing on git repo uploaded files
+/*
+!/banner
+!index.html
+!.gitignore

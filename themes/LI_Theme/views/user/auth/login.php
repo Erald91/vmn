@@ -9,9 +9,6 @@ $this->pageTitle = Yii::t('UserModule.views_auth_login', 'Login');
 ?>
 
 <div class="container" style="text-align: center;">
-    <?= humhub\widgets\SiteLogo::widget(['place' => 'login']); ?>
-    <br>
-
     <?php 
      if(Yii::$app->hasModule('llinkedin')){
     ?>    
@@ -19,20 +16,18 @@ $this->pageTitle = Yii::t('UserModule.views_auth_login', 'Login');
     $langingpage_content = \app\modules\llinkedin\models\LlinkedinLoginpageContent::find()->one();
     echo $langingpage_content->content;
     ?>
-        <div class="panel panel-default animated bounceIn" id="login-form"
-             style="max-width: 300px; margin: 0 auto 20px; text-align: left;">
-            <div class="panel-body">
-                <a href="<?php echo Yii::$app->request->baseUrl; ?>/index.php/llinkedin/llinkedin" class="nw-linkedin">
-                    <div class="btn btn-group-justified btn-success" style="background: #07b;">
-
-                        <div style="text-align: left; float: left;"><strong>In|</strong></div>
-                        Sign in with LinkedIn
-                       
-                    
-                    </div>
-                </a>
-            </div>
+    
+    <div class="panel panel-default animated bounceIn" id="login-form"
+         style="max-width: 300px; margin: 0 auto 20px; text-align: left;">
+        <div class="panel-body">
+            <a href="<?php echo Yii::$app->request->baseUrl; ?>/index.php/llinkedin/llinkedin" class="nw-linkedin">
+                <div class="btn btn-group-justified btn-success" style="background: #07b;">
+                    <div style="text-align: left; float: left;"><strong>In|</strong></div>
+                    Sign in with LinkedIn
+                </div>
+            </a>
         </div>
+    </div>
 
      <?php } else { ?>
     

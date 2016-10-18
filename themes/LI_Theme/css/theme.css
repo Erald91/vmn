@@ -75,7 +75,7 @@
     color: #aeaeae !important;
 }
 body {
-    padding-top: 130px;
+    padding-top: 130px !important;
     background-color: #ededed;
     color: #777;
     font-family: 'Open Sans', sans-serif;
@@ -147,8 +147,6 @@ input[type=select] {
     hyphens: auto;
 }
 .login-container {
-    background-color: #708fa0;
-    background-image: linear-gradient(to right, #708fa0 0%, #8fa7b4 50%, #8fa7b4 100%), linear-gradient(to right, #7f9baa 0%, #bdcbd3 51%, #adbfc9 100%);
     background-size: 100% 100%;
     position: relative;
     padding-top: 40px;
@@ -170,13 +168,14 @@ input[type=select] {
     color: #fff !important;
 }
 .login-container .panel {
-    box-shadow: 0 0 15px #627d92;
-    -moz-box-shadow: 0 0 15px #627d92;
-    -webkit-box-shadow: 0 0 15px #627d92;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
 }
 .login-container .panel .panel-heading,
 .login-container .panel .panel-body {
-    padding: 15px;
+    padding: 10px;
 }
 .login-container select {
     color: #555555;
@@ -2156,6 +2155,9 @@ ul.tour-list li.completed a {
 .powered a {
     color: #b8c7d3 !important;
 }
+div.text.powered {
+	display: none !important;
+}
 .errorMessage {
     color: #ff8989;
     padding: 10px 0;
@@ -2632,7 +2634,7 @@ body.login-body{
 #app-title{
     font-size: 45px;
     font-weight: bolder;
-    color: #000;
+    color: #000000 !important;
     line-height: 45px;
     margin: 5px 0px 0px 0px;
     text-align: center;

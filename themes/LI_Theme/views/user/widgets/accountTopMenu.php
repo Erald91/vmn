@@ -1,10 +1,21 @@
 <?php
-
+use \Yii;
 use \yii\helpers\Html;
 use \yii\helpers\Url;
+
+$items = $this->context->getItems();
+$items = Yii::$app->user->isAdmin() ? $items : array_filter($items, function($item) {
+	return $item['label'] == 'Logout';
+});
+
 ?>
 <?php if (Yii::$app->user->isGuest): ?>
-    <a href="<?php echo Url::toRoute('/user/auth/login'); ?>" class="btn btn-enter" data-target="#globalModal">Sign in / up</a>
+    <a href="/llinkedin/llinkedin" class="nw-linkedin">
+        <div class="btn btn-primary llinkedin-new" style="background: #07b;">
+            <div style="text-align: left; float: left;"><strong>In|</strong></div>
+            Sign in with LinkedIn
+        </div>
+    </a>
 <?php else: ?>
     <ul class="nav">
         <li class="dropdown account">
@@ -21,7 +32,7 @@ use \yii\helpers\Url;
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu pull-right">
-                <?php foreach ($this->context->getItems() as $item): ?>
+                <?php foreach ($items as $item): ?>
                     <?php if ($item['label'] == '---'): ?>
                         <li class="divider"></li>
                         <?php else: ?>

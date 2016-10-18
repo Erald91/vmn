@@ -20,7 +20,7 @@ class Events extends \yii\base\Object
 
     public static function onTopMenuRightInit($event)
     {
-       // disabled
+		$event->sender->addWidget(widgets\SearchMenu::className());
     }
 
     public static function onAfterSaveComment($event)

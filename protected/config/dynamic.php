@@ -5,8 +5,8 @@
     array (
       'class' => 'yii\\db\\Connection',
       'dsn' => 'mysql:host=localhost;dbname=vmn',
-      'username' => 'root',
-      'password' => '',
+      'username' => 'ecafka',
+      'password' => 'WWs4QP6hnF8N9xSL',
       'charset' => 'utf8',
     ),
     'user' => 

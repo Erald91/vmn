@@ -64,7 +64,7 @@ $this->registerJs("
     Mousetrap.bind(\"ctrl+d\", function(e) {
     var pageid = $('.get-data').attr('data-pageid');
     baseurl = location.href.split( '/' );
-    ssss = 'http://'+baseurl[2]+'/'+baseurl[3]+'/index.php?r=custom_profile/default/directory&pid='+pageid;
+    ssss = '/custom_profile/default/directory?pid='+pageid;
 	window.location.replace(ssss);
 });
     ");

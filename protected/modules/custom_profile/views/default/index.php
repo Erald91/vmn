@@ -32,7 +32,7 @@ Assets::register($this);
                                 foreach ($active_pages as $page) {
                                     ?> 
                                     <li class="admin-userprofiles-field" data-id="1">
-                                        <a href="<?php echo Yii::$app->request->baseUrl . '/index.php/survey_page/edit/' . $page->id . '' ?>"><?php echo "$page->name"; ?></a>
+                                        <a href="<?php echo Yii::$app->request->baseUrl . '/survey_page/edit/' . $page->id . '' ?>"><?php echo "$page->name"; ?></a>
                                         <a class="btn btn-danger btn-xs index-btn page-delete" id="<?php echo $page->id; ?>" href="#"><i class="fa fa-times"></i></a>
                                     </li>
 
@@ -109,7 +109,7 @@ $this->registerJs("
     $(document).on('click','.page-delete', function() {
         id = $(this).attr('id');
         $.ajax({
-            url: '/index.php/custom_profile/default/delete-page',
+            url: '/custom_profile/default/delete-page',
             type: 'post',
             data: {id: +id },
             success: function(data) {
@@ -121,7 +121,7 @@ $this->registerJs("
     
     $(document).ready(function() { 
         $.ajax({
-            url: '/index.php/custom_profile/default/topmenu-status',
+            url: '/custom_profile/default/topmenu-status',
             type: 'post',
             success: function(data) {
                 $('.btn-toggle').find('.btn').toggleClass('active');
@@ -151,7 +151,7 @@ $this->registerJs("
         }
         var status_val = $(this).find('.active').attr('id');
         $.ajax({
-            url: '/index.php/custom_profile/default/change-topmenu-status',
+            url: '/custom_profile/default/change-topmenu-status',
             type: 'post',
             data: {status_val: status_val },
             success: function(data) {
@@ -164,7 +164,7 @@ $this->registerJs("
     $(document).on('click','.signin_url_save', function() {
         value = $('.signin_url').val();
         $.ajax({
-            url: '/index.php/custom_profile/default/sign-url-save',
+            url: '/custom_profile/default/sign-url-save',
             type: 'post',
             data: {value: value },
             success: function(data) {

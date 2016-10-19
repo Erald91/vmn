@@ -127,7 +127,6 @@ Assets::register($this);
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <?php
 $this->registerJs("
-    base_url = window.location.pathname.split( '/' )[1];
     $('.pfield-show').sortable();
     
     $(document).on('change','.another_url', function() {
@@ -169,7 +168,7 @@ $this->registerJs("
         pagenam = $(this).val();
         idvalue = $(this).attr('id');
         $.ajax({
-            url: '/'+base_url+'/index.php/custom_profile/default/check-page',
+            url: '/custom_profile/default/check-page',
             type: 'post',
             data: {pagename: pagenam,id: idvalue},
             success: function(data) {
@@ -186,7 +185,7 @@ $this->registerJs("
         pg_id = $(this).attr('data-pg_id');
         if($(this).is(':checked')== true) {
             $.ajax({
-                url: '/'+base_url+'/index.php/custom_profile/default/load-field',
+                url: '/custom_profile/default/load-field',
                 type: 'post', 
                 data: {title: titl, internl: prof_field_value },
                 success: function(data) {
@@ -194,7 +193,7 @@ $this->registerJs("
                 }
             });
             $.ajax({
-                url: '/'+base_url+'/index.php/custom_profile/default/insert-field',
+                url: '/custom_profile/default/insert-field',
                 type: 'post',
                 data: {id: +prof_field_value, pg_id: pg_id },
                 success: function(data) {
@@ -208,7 +207,7 @@ $this->registerJs("
         }
         if($(this).is(':checked')== false) { 
             $.ajax({
-            url: '/'+base_url+'/index.php/custom_profile/default/delete',
+            url: '/custom_profile/default/delete',
             type: 'post',
             data: {id: +prof_field_value, pg_id: pg_id},
             success: function(data) {
@@ -233,7 +232,7 @@ $this->registerJs("
             titl.push($(this).attr('data-titl'));
         });
         $.ajax({
-                url: '/'+base_url+'/index.php/custom_profile/default/first-load-field',
+                url: '/custom_profile/default/first-load-field',
                 type: 'post', 
                 //dataType: 'json',
                 data: {title: titl, internl: ids },

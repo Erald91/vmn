@@ -162,7 +162,7 @@ Assets::register($this);
                     <?php
                         if(Yii::$app->db->createCommand("SELECT * FROM `module_enabled` WHERE module_id = 'mail'")->execute()) {
                         ?>
-                        <a class="btn btn-info" href="/humhub/index.php/mail/mail/create?ajax=1&amp;userGuid=<?php echo $guid->guid; ?>" data-target="#globalModal">Send message</a>
+                        <a class="btn btn-info" href="/humhub/mail/mail/create?ajax=1&amp;userGuid=<?php echo $guid->guid; ?>" data-target="#globalModal">Send message</a>
                         <?php
                         } else {
                             ?>

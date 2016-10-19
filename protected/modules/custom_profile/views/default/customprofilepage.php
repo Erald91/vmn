@@ -123,8 +123,7 @@ Assets::register($this);
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <?php
 $this->registerJs("
-    base_url = window.location.pathname.split( '/' )[1];
-    $('.sort-field').sortable();
+   $('.sort-field').sortable();
     
    $(document).on('click','.chkbx-text2', function() { 
         id_val = $(this).val();
@@ -133,7 +132,7 @@ $this->registerJs("
         if($(this).is(':checked')== true) {
             $('.sort-field').append('<li id='+internl+'><input type=checkbox name=advsry[] value='+id_val+' checked=checked style=display:none><div class=control-label><a class=srt-btn-new href=\"#\" title=\"Drag to rearrange profile fields\"><i class=\"fa fa-arrows-v\" aria-hidden=\"true\"></i></a>'+title+' <input type=text class=dispfield name=disp2[]></div></li>');
             $.ajax({
-                url: '/'+base_url+'/index.php/custom_profile/default/load-field',
+                url: '/custom_profile/default/load-field',
                 type: 'post',
                 data: {title: title, internl: internl },
                 success: function(data) {

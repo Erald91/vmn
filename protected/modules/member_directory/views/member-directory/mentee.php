@@ -16,7 +16,7 @@ Assets::register($this);
         </div>
         <div class="virtual-business-card">
             <ul class="nav nav-tabs virtual-business-tab">
-                <li><a href="<?php echo Yii::$app->request->baseUrl . '/index.php/member_directory/member-directory' ?>"><strong>Mentor view</strong></a></li>
+                <li><a href="<?php echo Yii::$app->request->baseUrl . '/member_directory/member-directory' ?>"><strong>Mentor view</strong></a></li>
                 <li class="active"><a href="<?php echo Yii::$app->request->baseUrl . '/index.php/member_directory/member-directory/mentee' ?>"><strong>Mentee view</strong></a></li>
                 <a href="#" class="member"><strong>Member Search (Coming Soon)</strong></a>                        
             </ul>
@@ -27,15 +27,15 @@ Assets::register($this);
                             <?php
                             $guid = \humhub\modules\user\models\User::find()->select(['guid'])->where(['id' => $userdata->user_id])->one();
                             ?>
-                            <a href="<?php echo Yii::$app->request->baseUrl . '/index.php/member_directory/member-directory/profile?id=' . $userdata->user_id ?>">
+                            <a href="<?php echo Yii::$app->request->baseUrl . '/member_directory/member-directory/profile?id=' . $userdata->user_id ?>">
                                 <img src="<?php echo Yii::$app->request->baseUrl; ?>/uploads/profile_image/<?php echo $guid->guid; ?>.jpg" onerror="this.src='<?php echo Yii::$app->request->baseUrl; ?>/img/default_user.jpg'" alt="user">  
                             </a>
                             <div class="but-group">
-                                <a href="<?php echo Yii::$app->request->baseUrl . '/index.php/member_directory/member-directory/profile?id=' . $userdata->user_id ?>" class="view-profile"> View Profile</a>
+                                <a href="<?php echo Yii::$app->request->baseUrl . '/member_directory/member-directory/profile?id=' . $userdata->user_id ?>" class="view-profile"> View Profile</a>
                                 <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
                             </div>
                         </div>
-                        <a href="<?php echo Yii::$app->request->baseUrl . '/index.php/member_directory/member-directory/profile?id=' . $userdata->user_id ?>" class="a-tag">
+                        <a href="<?php echo Yii::$app->request->baseUrl . '/member_directory/member-directory/profile?id=' . $userdata->user_id ?>" class="a-tag">
                             <h4>
                                 <strong>
                                     <?php
@@ -175,16 +175,16 @@ Assets::register($this);
                         <div class="virtual-business-card-outer active">
                             <!--<div class="virtual-business-card-outer virtual-business-card-effect"> -->
                             <div class="user-info">
-                                <a href="<?php echo Yii::$app->request->baseUrl . '/index.php/member_directory/member-directory/profile?id=' . $model->user_id ?>">
+                                <a href="<?php echo Yii::$app->request->baseUrl . '/member_directory/member-directory/profile?id=' . $model->user_id ?>">
                                     <img src="<?php echo Yii::$app->request->baseUrl; ?>/uploads/profile_image/<?php echo $guid->guid; ?>.jpg" onerror="this.src='<?php echo Yii::$app->request->baseUrl; ?>/img/default_user.jpg'" alt="user">   
                                 </a>
                                 <div class="but-group">
-                                    <a href="<?php echo Yii::$app->request->baseUrl . '/index.php/member_directory/member-directory/profile?id=' . $model->user_id ?>" class="view-profile"> View Profile</a>
+                                    <a href="<?php echo Yii::$app->request->baseUrl . '/member_directory/member-directory/profile?id=' . $model->user_id ?>" class="view-profile"> View Profile</a>
                                     <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
                                 </div>
                             </div>
 
-                            <a href="<?php echo Yii::$app->request->baseUrl . '/index.php/member_directory/member-directory/profile?id=' . $model->user_id ?>" class="a-tag">
+                            <a href="<?php echo Yii::$app->request->baseUrl . '/member_directory/member-directory/profile?id=' . $model->user_id ?>" class="a-tag">
                                 <h4>
                                     <strong>
                                         <?php

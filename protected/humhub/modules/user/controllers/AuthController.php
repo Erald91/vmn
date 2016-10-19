@@ -66,10 +66,9 @@ class AuthController extends Controller
      */
     public function actionLogin()
     {
-        // If user is already logged in, redirect him to the custom directory/page
+        // If user is already logged in, redirect him to the custom member directory
         if (!Yii::$app->user->isGuest) {
-			$signin_url = \humhub\models\Setting::find()->select(['value'])->where(['module_id' => 'custom_profile', 'name' => 'signin_url'])->one();
-            return $this->redirect($signin_url->value);
+            return $this->redirect(['//member_directory/member-directory/']);
         }
 
         // Login Form Handling

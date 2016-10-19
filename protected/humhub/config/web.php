@@ -32,11 +32,12 @@ $config = [
                 'custom_profile/default/view/<uid:\d+>/<pid:\d+>/<pdata:\d+>' => 'custom_profile/default/view',
                 'custom_profile/default/edit-profile/<pid:\d+>' => 'custom_profile/default/edit-profile',
                 'custom_profile/customprofile/thankyou/<pid:\d+>' => 'custom_profile/customprofile/thankyou',
+				'survey_page/edit/<id:\d+>' => 'custom_profile/default/edit'
             ]
         ],
     ],
     'modules' => [
-	
+		
 	],
 ];
 

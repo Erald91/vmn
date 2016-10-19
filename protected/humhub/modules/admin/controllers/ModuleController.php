@@ -26,7 +26,6 @@ class ModuleController extends Controller
 {
 
     private $_onlineModuleManager = null;
-    public $enableCsrfValidation = false;
 
     public function init() {
         $this->appendPageTitle(Yii::t('AdminModule.base', 'Modules'));

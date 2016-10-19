@@ -19,6 +19,8 @@ class Controller extends \humhub\components\Controller
 {
 
     public $subLayout = "@humhub/modules/admin/views/layouts/main";
+	
+	public $enableCsrfValidation = false;
 
     public function init()
     {

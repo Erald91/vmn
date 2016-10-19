@@ -25,8 +25,6 @@ use humhub\modules\admin\models\forms\UserEditForm;
  */
 class UserController extends Controller
 {
-    public $enableCsrfValidation = false;
-
     public function init()
     {
         $this->appendPageTitle(Yii::t('AdminModule.base', 'Users'));

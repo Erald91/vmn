@@ -4,6 +4,11 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 # Define menu items to remove from navigation
 $exludedMenus = ['DIRECTORY', 'DASHBOARD'];
+# Define menu items only for admins
+if(!\Yii::$app->user->isAdmin()) {
+	array_push($exludedMenus, 'CUSTOM PROFILE PAGES');
+}
+
 $items = $this->context->getItems();
 $items = array_filter($items, function($item) use($exludedMenus) {
 	return !in_array(strtoupper($item['label']), $exludedMenus);

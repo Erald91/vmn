@@ -25,7 +25,7 @@
         'theme' => 
         array (
           'name' => 'LI_Theme',
-          'basePath' => 'D:/VMN/themes\\LI_Theme',
+          'basePath' => '/var/www/scopic_vmn/vmn/themes/LI_Theme',
           'publishResources' => false,
         ),
       ),
@@ -40,7 +40,7 @@
       'theme' => 
       array (
         'name' => 'LI_Theme',
-        'basePath' => 'D:/VMN/themes\\LI_Theme',
+        'basePath' => '/var/www/scopic_vmn/vmn/themes/LI_Theme',
         'publishResources' => false,
       ),
     ),
@@ -64,12 +64,12 @@
         'installer_database' => 'vmn',
       ),
     ),
-    'config_created_at' => 1476299696,
+    'config_created_at' => 1476810024,
     'horImageScrollOnMobile' => '1',
     'databaseInstalled' => true,
     'installed' => true,
   ),
-  'name' => 'VMN',
-  'language' => 'en-US',
+  'name' => 'Veteran Mentor Network',
+  'language' => 'en',
   'timeZone' => 'Europe/Berlin',
 ); ?>

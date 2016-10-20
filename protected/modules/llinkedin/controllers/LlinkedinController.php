@@ -150,7 +150,8 @@ class LlinkedinController extends Controller {
                     $muser = \humhub\modules\user\models\User::find()->where(['linkedin_id' => $id])->one();
                     if (isset($muser->id)) {
                         Yii::$app->user->switchIdentity($muser);
-                        return $this->redirect(Yii::$app->user->getIdentity()->getUrl());
+						// will check if after login user will be redirected to his last visited page in application
+                        return $this->redirect(Yii::$app->user->returnUrl == "/" ? Yii::$app->user->getIdentity()->getUrl() : Yii::$app->user->returnUrl);
                     } else {     //-----------------NEW USER ------------------------
                         $m2user = \humhub\modules\user\models\User::find()->where(['email' => $emailAddress])->one();
                         $userModel = new User();

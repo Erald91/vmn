@@ -4,7 +4,6 @@ use yii\web\View;
 use yii\helpers\Html;
 use kartik\select2\Select2;
 use kartik\date\DatePicker;
-use kartik\editable\Editable;
 use yii\widgets\ActiveForm;
 use humhub\assets\TagAsset;
 use humhub\modules\custom_profile\Assets;
@@ -44,7 +43,7 @@ TagAsset::register($this);
 
                             <div class="edit-profile-form">
 
-                                <label><?php echo $titlevalue->title; ?></label>
+                                <label><?php echo $titlevalue->display_name; ?></label>
                                 <div class="small-text"> <?php echo $fieldtyp->description; ?></div>
                                 <?php
                                 switch ($fieldtypes) {
